@@ -17,11 +17,10 @@ const validarJWT = ( req, res = response, next ) => {
 
         const { uid, name} = jwt.verify(
             token,
-            process.env.SECRET_JWT_SEED
+            process.env.SECRET_JWT_SED
         );
 
-       req.uid = uid;
-       req.name = name;
+        req.user = { uid, name };
         
     } catch (error) {
         return res.status(401).json({
@@ -30,7 +29,7 @@ const validarJWT = ( req, res = response, next ) => {
         })
     }
 
-    // next();
+     next();
 
 }
 

@@ -20,7 +20,7 @@ router.use(validarJWT);
 router.get('/', getEventos);
 
 //Crear un nuevo evento
-router.post('/'
+router.post('/agregar'
     , [ //Middlewares
         check('title', 'El titulo es obligatorio').not().isEmpty(),
         check('start', 'Fecha de inicio es obligatoria').custom(isDate),
