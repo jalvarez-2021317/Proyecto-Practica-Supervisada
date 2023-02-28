@@ -14,8 +14,8 @@ const router = Router();
 router.post(
     '/new', 
     [ //Middlewares
-        check('nombre', 'El nombre es obligatorio').not().isEmpty(),
-        check('correo', 'El email es obligatorio').isEmail(),
+        check('name', 'El nombre es obligatorio').not().isEmpty(),
+        check('email', 'El email es obligatorio').isEmail(),
         check('password', 'Password es obligatorio y debe ser de 6 caracteres').isLength({ min: 6 }),
         validarCampos
     ]  
@@ -25,7 +25,7 @@ router.post(
 router.post(
     '/login', 
     [ //Middlewares
-        check('correo', 'El email es obligatorio').isEmail(),
+        check('email', 'El email es obligatorio').isEmail(),
         check('password', 'Password es obligatorio y debe ser de 6 caracteres').isLength({ min: 6 }),
         validarCampos
     ]

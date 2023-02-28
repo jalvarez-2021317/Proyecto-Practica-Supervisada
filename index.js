@@ -17,7 +17,7 @@ app.use(cors());
 app.use( express.static('public') );
 
 // Lectura y parseo del Body
-app.use( express.json );
+app.use( express.json() );
 
 //Rutas
 app.use('/api/auth', require('./routes/auth'));
