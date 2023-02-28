@@ -53,7 +53,7 @@ const actualizarEvento = async (req, res = response) => {
         if (!evento) {
             return res.status(404).json({
                 ok: false,
-                msg: 'Evemto no existe por el id'
+                msg: 'Evento no existe por el id'
             });
         }
 
