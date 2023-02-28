@@ -19,7 +19,8 @@ const EventoSchema = Schema({
    },//Usuario que define quien hizo la nota
    user: {
         type: Schema.Types.ObjectId,
-        ref: 'Usuario'
+        ref: 'Usuario',
+        require: true
    }
 
 });
