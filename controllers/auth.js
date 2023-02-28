@@ -5,6 +5,7 @@ const { generarJWT } = require('../helpers/jwt');
 
 const crearUsuario = async (req, res = response) => {
 
+    
     const { email, password } = req.body;
 
     try {
